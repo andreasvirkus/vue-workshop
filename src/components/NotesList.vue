@@ -22,7 +22,7 @@
     <div class="container">
       <ul>
         <li v-for="note in filteredNotes">
-          <a href="#" :class="{active: activeNote === note}"
+          <a href="#" :class="{active: activeNote === note, fav: note.favorite}"
             @click="updateActiveNote(note)"
             >{{ note.text.trim().substring(0, 30) }}
           </a>
