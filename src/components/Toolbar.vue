@@ -1,10 +1,9 @@
 <template>
   <div class="toolbar">
-    <i @click="addNote" class="glyphicon glyphicon-plus"></i>
-    <i @click="toggleFavorite"
-      class="glyphicon glyphicon-star"
-      :class="{ starred: activeNote && activeNote.favorite }"></i>
-    <i @click="deleteNote" class="glyphicon glyphicon-remove"></i>
+    <i @click="addNote">&plus;</i>
+    <i @click="toggleFavorite" v-if="activeNote" class="star"
+       :class="{ starred: activeNote && activeNote.favorite }">&starf;</i>
+    <i @click="deleteNote">&times;</i>
   </div>
 </template>
 

@@ -3,37 +3,31 @@
 
     <div class="list-header">
       <h2>Notes</h2>
-      <div class="btn-group btn-group-justified" role="group">
+      <div role="group">
         <!-- All Notes button -->
-        <div class="btn-group" role="group">
-          <button type="button" class="btn btn-default"
-            @click="show = 'all'"
-            :class="{active: show === 'all'}">
-            All Notes
-          </button>
-        </div>
+        <button type="button" class="button"
+          @click="show = 'all'"
+          :class="{active: show === 'all', 'button-outline': show !== 'all'}">
+          All Notes
+        </button>
         <!-- Favorites Button -->
-        <div class="btn-group" role="group">
-          <button type="button" class="btn btn-default"
-            @click="show = 'favorites'"
-            :class="{active: show === 'favorites'}">
-            Favorites
-          </button>
-        </div>
+        <button type="button" class="button"
+          @click="show = 'favorites'"
+          :class="{active: show === 'favorites', 'button-outline': show !== 'favorites'}">
+          Favorites
+        </button>
       </div>
     </div>
     <!-- render notes in a list -->
     <div class="container">
-      <div class="list-group">
-        <a v-for="note in filteredNotes"
-          class="list-group-item" href="#"
-          :class="{active: activeNote === note}"
-          @click="updateActiveNote(note)">
-          <h4 class="list-group-item-heading">
-            {{ note.text.trim().substring(0, 30) }}
-          </h4>
-        </a>
-      </div>
+      <ul>
+        <li v-for="note in filteredNotes">
+          <a href="#" :class="{active: activeNote === note}"
+            @click="updateActiveNote(note)"
+            >{{ note.text.trim().substring(0, 30) }}
+          </a>
+        </li>
+      </ul>
     </div>
 
   </div>

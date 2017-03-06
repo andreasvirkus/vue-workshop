@@ -1,9 +1,9 @@
 <template>
   <div class="note-editor">
     <textarea
-      :value="activeNoteText ? activeNoteText : 'Click the + symbol for a new note!'"
-      @input="editNote"
-      class="form-control">
+      :value="activeNoteText ? activeNoteText : ''"
+      placeholder="Click the + symbol for a new note!"
+      @input="editNote">
     </textarea>
   </div>
 </template>

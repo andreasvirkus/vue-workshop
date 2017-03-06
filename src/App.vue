@@ -53,11 +53,10 @@ export default {
   }
 
   li {
-    display: inline-block;
     margin: 0 10px;
   }
 
-  a {
+  .note-editor a {
     color: #42b983;
   }
 
@@ -67,17 +66,55 @@ export default {
     width: 80px;
     height: 100%;
     background-color: #30414D;
-    color: #767676;
+    color: #DDD;
     padding: 35px 25px 25px 25px;
+
+    i {
+      font-size: 2.2em;
+      margin-bottom: 35px;
+      cursor: pointer;
+      font-style: normal;
+      opacity: 0.8;
+      transition: opacity 0.1s ease-out;
+    }
+
+    i:hover {
+      opacity: 1;
+    }
+    .star {
+      font-size: 1.6em;
+    }
+
+    .starred {
+      color: #F7AE4F;
+    }
   }
+
 
   .notes-list {
     float: left;
-    width: 300px;
+    width: 330px;
     height: 100%;
     background-color: #F5F5F5;
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
+
+    a {
+      display: block;
+      padding: .4em;
+    }
+
+    li:hover {
+      background-color: #bc88dc;
+      a {
+        color: #fff;
+      }
+    }
+  }
+
+  button.button:hover,
+  button.button:focus {
+    background-color: #9b4dca;
   }
 
   .list-header {
@@ -117,24 +154,10 @@ export default {
 
   .note-editor textarea {
     height: 100%;
+    width: 95%;
     border: 0;
     border-radius: 0;
     font-size: 1.4em;
-  }
-
-  .toolbar i {
-    font-size: 30px;
-    margin-bottom: 35px;
-    cursor: pointer;
-    opacity: 0.8;
-    transition: opacity 0.5s ease;
-  }
-
-  .toolbar i:hover {
-    opacity: 1;
-  }
-
-  .starred {
-    color: #F7AE4F;
+    color: #444;
   }
 </style>
