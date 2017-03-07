@@ -1,6 +1,6 @@
 <template>
   <main class="note-editor">
-    <textarea
+    <textarea id="editor"
       :value="activeNoteText ? activeNoteText : ''"
       placeholder="Click the + symbol for a new note!"
       @input="editNote">
@@ -31,8 +31,8 @@ export default {
     height: 100%;
     width: 95%;
     border: 0;
-    border-radius: 0;
     font-size: 1.4em;
     color: #444;
+    resize: none;
   }
 </style>

@@ -26,12 +26,14 @@ export default {
 
 <style lang="scss">
   .toolbar {
-    float: left;
-    width: 80px;
+    flex-basis: 80px;
     height: 100%;
     background-color: #30414D;
     color: #DDD;
-    padding: 35px 25px 25px 25px;
+    padding: 65px 25px 25px 25px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
 
     i {
       font-size: 2.2em;

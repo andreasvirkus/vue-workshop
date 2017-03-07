@@ -60,30 +60,31 @@ export default {
 
 <style lang="scss">
   .notes-list {
-    flex-basis: 330px;
-    width: 330px;
-    height: 100%;
+    flex-basis: 350px;
     background-color: #F5F5F5;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
-    padding-top: 1em;
 
     a {
-      display: block;
-      padding: .4em;
+      padding: .4em .4em .4em 1em;
       display: flex;
+      border-radius: 3px;
+
+      &:hover {
+        background-color: #bc88dc;
+        color: #fff;
+      }
+
+      &.active {
+        background-color: #9b4dcb;
+        color: #fff;
+      }
     }
 
     i {
       margin-right: 2em;
-
     }
 
-    li:hover {
-      background-color: #bc88dc;
-      a {
-        color: #fff;
-      }
+    li + li {
+      margin-top: .3em;
     }
   }
 
@@ -93,7 +94,7 @@ export default {
   }
 
   .list-header {
-    padding: 5px 25px 25px 25px;
+    padding: 25px;
   }
 
   .list-header h2 {
@@ -101,25 +102,6 @@ export default {
     text-transform: uppercase;
     text-align: center;
     font-size: 22px;
-    padding-bottom: 8px;
-  }
-
-  .notes-list .container {
-    height: calc(100% - 137px);
-  	max-height: calc(100% - 137px);
-  	overflow: auto;
-    width: 100%;
-    padding: 0;
-  }
-
-  .notes-list .container .list-group-item {
-    border: 0;
-    border-radius: 0;
-  }
-
-  .list-group-item-heading {
-    font-weight: 300;
-    font-size: 15px;
   }
 
   .fav::after {
