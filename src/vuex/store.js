@@ -9,7 +9,7 @@ const state = {
 };
 
 const getters = {
-  activeNoteText: state => state.activeNote.text
+  activeNoteText: state => state.activeNote ? state.activeNote.text : ''
 };
 
 const mutations = {

@@ -15,4 +15,14 @@ npm run dev
 npm run build
 ```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+Workshop flow:
+- Go through vue-cli project setup
+- Explain Vue.js in general (suggest Vue dev tools)
+- Set up component views
+- Add a tad of style
+- Briefly explain Vuex
+- Install babel plugin (babel-plugin-transform-object-rest-spread) and vuex
+- Set up a store
+- Add event listeners
+- Map getters, actions and state
+- Enjoy a hard day's work(...shop)

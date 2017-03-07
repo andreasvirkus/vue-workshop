@@ -1,10 +1,10 @@
 <template>
-  <div class="toolbar">
+  <aside class="toolbar">
     <i @click="addNote">&plus;</i>
-    <i @click="toggleFavorite" v-if="activeNote" class="star"
+    <i @click="toggleFavorite" class="star"
        :class="{ starred: activeNote && activeNote.favorite }">&starf;</i>
     <i @click="deleteNote">&times;</i>
-  </div>
+  </aside>
 </template>
 
 <script>
@@ -23,3 +23,33 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+  .toolbar {
+    float: left;
+    width: 80px;
+    height: 100%;
+    background-color: #30414D;
+    color: #DDD;
+    padding: 35px 25px 25px 25px;
+
+    i {
+      font-size: 2.2em;
+      margin-bottom: 35px;
+      cursor: pointer;
+      opacity: 0.8;
+      transition: opacity 0.1s ease-out;
+    }
+
+    i:hover {
+      opacity: 1;
+    }
+    .star {
+      font-size: 1.6em;
+    }
+
+    .starred {
+      color: #F7AE4F;
+    }
+  }
+</style>
