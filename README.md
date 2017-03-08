@@ -21,13 +21,13 @@ npm run build
 
 Workshop flow:
 - Go through vue-cli project setup
--- Explain Vue.js in general (introduce Vue dev tools for Chrome)
--- Go over Vue's single-file components
--- Explain components (lifecycle hooks, data & computed properties, exporting them)
+  - Explain Vue.js in general (introduce Vue dev tools for Chrome)
+  - Go over Vue's single-file components
+  - Explain components (lifecycle hooks, data & computed properties, exporting them)
 - Set up component views
 - Add a tad of style
 - Briefly explain Vuex (state, getters, actions & mutations)
--- Install babel plugin (babel-plugin-transform-object-rest-spread) and vuex
+  - Install babel plugin (babel-plugin-transform-object-rest-spread) and vuex
 - Set up a store
 - Add event listeners for our views
 - Map getters, actions and state under our components
