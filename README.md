@@ -5,6 +5,7 @@
 A small workshop inspired by Coligo.io's Vuex [tutorial](https://coligo.io/learn-vuex-by-building-notes-app/).
 
 Rewritten in Vue 2; uses Vue.js, Vuex & milligram.css.
+Set up with [vue-cli](https://github.com/vuejs/vue-cli) (Using the webpack-simple template).
 
 ## Build Setup
 
