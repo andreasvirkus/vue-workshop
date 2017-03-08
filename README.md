@@ -2,6 +2,10 @@
 
 > Vue.js based notes app
 
+A small workshop inspired by Coligo.io's Vue.js Notes app tutorial.
+
+Rewritten in Vue 2; uses Milligram.css.
+
 ## Build Setup
 
 ``` bash
@@ -17,12 +21,14 @@ npm run build
 
 Workshop flow:
 - Go through vue-cli project setup
-- Explain Vue.js in general (suggest Vue dev tools)
+-- Explain Vue.js in general (introduce Vue dev tools for Chrome)
+-- Go over Vue's single-file components
+-- Explain components (lifecycle hooks, data & computed properties, exporting them)
 - Set up component views
 - Add a tad of style
-- Briefly explain Vuex
-- Install babel plugin (babel-plugin-transform-object-rest-spread) and vuex
+- Briefly explain Vuex (state, getters, actions & mutations)
+-- Install babel plugin (babel-plugin-transform-object-rest-spread) and vuex
 - Set up a store
-- Add event listeners
-- Map getters, actions and state
+- Add event listeners for our views
+- Map getters, actions and state under our components
 - Enjoy a hard day's work(...shop)
