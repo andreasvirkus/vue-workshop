@@ -1,25 +1,25 @@
 <template>
   <div class="notes-list">
 
-    <header class="list-header">
-      <h2>Notes</h2>
+    <header>
+      <h1>Notes</h1>
       <div role="group">
         <!-- All Notes button -->
         <button type="button" class="button"
-          @click="show = 'all'"
-          :class="{active: show === 'all', 'button-outline': show !== 'all'}">
+          @click="favoritesView = false"
+          :class="{ active: !favoritesView, 'button-outline': favoritesView }">
           All Notes
         </button>
         <!-- Favorites Button -->
         <button type="button" class="button"
-          @click="show = 'favorites'"
-          :class="{active: show === 'favorites', 'button-outline': show !== 'favorites'}">
+          @click="favoritesView = true"
+          :class="{ active: favoritesView, 'button-outline': !favoritesView}">
           Favorites
         </button>
       </div>
     </header>
-    <!-- render notes in a list -->
-    <nav class="container">
+    <!-- Render notes in a list -->
+    <nav>
       <ul>
         <li v-for="(note, index) in filteredNotes">
           <a href="#" :class="{ active: activeNote === note, fav: note.favorite }"
@@ -39,7 +39,7 @@ import { mapActions, mapState } from 'vuex';
 export default {
   data () {
     return {
-      show: 'all'
+      favoritesView: false
     }
   },
   methods: {
@@ -48,11 +48,11 @@ export default {
   computed: {
     ...mapState(['notes', 'activeNote']),
     filteredNotes() {
-      if (this.show === 'all') {
-        return this.notes;
-      } else if (this.show === 'favorites') {
+      if (this.favoritesView) {
         return this.notes.filter(note => note.favorite);
       }
+
+      return this.notes;
     }
   }
 };
@@ -62,6 +62,7 @@ export default {
   .notes-list {
     flex-basis: 350px;
     background-color: #F5F5F5;
+    padding-top: 1em;
 
     a {
       padding: .4em .4em .4em 1em;
@@ -69,13 +70,13 @@ export default {
       border-radius: 3px;
 
       &:hover {
-        background-color: #bc88dc;
-        color: #fff;
+        background-color: #BC88DC;
+        color: #FFF;
       }
 
       &.active {
-        background-color: #9b4dcb;
-        color: #fff;
+        background-color: #9B4DCB;
+        color: #FFF;
       }
     }
 
@@ -88,20 +89,20 @@ export default {
     }
   }
 
+  nav {
+    max-height: 80vh;
+    overflow: auto;
+  }
+
+  h1 {
+    font-weight: 200;
+    color: #555;
+  }
+
+  // Override milligram styles
   button.button:hover,
   button.button:focus {
-    background-color: #9b4dca;
-  }
-
-  .list-header {
-    padding: 25px;
-  }
-
-  .list-header h2 {
-    font-weight: 300;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 22px;
+    background-color: #9B4DCA;
   }
 
   .fav::after {

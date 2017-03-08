@@ -34,7 +34,7 @@ const actions = {
 const mutations = {
   ADD_NOTE(state) {
     const newNote = {
-      text: 'New note',
+      text: 'This is your ' + (state.notes.length + 1) + '. note',
       favorite: false
     };
 

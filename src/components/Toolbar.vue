@@ -36,11 +36,12 @@ export default {
     user-select: none;
 
     i {
+      display: block;
       font-size: 2.2em;
-      margin-bottom: 35px;
       cursor: pointer;
       opacity: 0.8;
       transition: opacity 0.1s ease-out;
+      font-style: normal;
     }
 
     i:hover {

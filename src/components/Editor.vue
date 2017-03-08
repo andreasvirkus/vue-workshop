@@ -1,5 +1,5 @@
 <template>
-  <main class="note-editor">
+  <main>
     <textarea id="editor"
       :value="activeNoteText ? activeNoteText : ''"
       placeholder="Click the + symbol for a new note!"
@@ -21,13 +21,13 @@ export default {
 };
 </script>
 
-<style lang="scss">
-  .note-editor {
+<style>
+  main {
     flex: 1;
     height: 100%;
   }
 
-  .note-editor textarea {
+  textarea {
     height: 100%;
     width: 95%;
     border: 0;
