@@ -2,6 +2,8 @@
 
 > Vue.js based notes app
 
+## !The `gh-pages` is the same as `master` branch, just also containing the built version.!
+
 A small workshop inspired by Coligo.io's Vuex [tutorial](https://coligo.io/learn-vuex-by-building-notes-app/).
 
 Rewritten in Vue 2; uses Vue.js, Vuex & milligram.css.
