@@ -38,5 +38,5 @@ Workshop flow:
 - Add Markdown support/parsing
 - Add local storage sync
 - Rearrange the view on smaller screen widths
--- Move the toolbar to the top
--- Make the notes list toggleable
+  - Move the toolbar to the top
+  - Make the notes list toggleable
