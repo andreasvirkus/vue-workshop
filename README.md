@@ -33,3 +33,7 @@ Workshop flow:
 - Add event listeners for our views
 - Map getters, actions and state under our components
 - Enjoy a hard day's work(...shop)
+
+**TODO**:
+- Add Markdown support/parsing
+- Add local storage sync
